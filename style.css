@@ -1,0 +1,98 @@
+/* Paste the CSS from the previous response here */
+/* ... (it includes body, canvas, .overlay, h2, p, .button-container, button styles, etc.) ... */
+html, body { /* Added html here for better consistency */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Smoother font */
+    color: #eee;
+}
+canvas {
+    display: block; /* Remove default bottom margin */
+    box-shadow: 0 0 20px rgba(180, 50, 255, 0.6); /* Enhanced glow */
+}
+/* Common styles for overlay screens */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(145deg, rgba(20, 0, 40, 0.9), rgba(0, 0, 10, 0.95)); /* Dark gradient bg */
+    padding: 35px 45px;
+    border-radius: 18px;
+    text-align: center;
+    border: 2px solid #FFD700; /* Gold border */
+    box-shadow: 0 5px 25px rgba(255, 223, 0, 0.5); /* Softer gold shadow */
+    z-index: 10; /* Ensure it's on top */
+    display: none; /* Hidden by default */
+    min-width: 320px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+.overlay h2 {
+    color: #FFD700;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.8rem; /* Slightly larger */
+    text-shadow: 0 0 8px rgba(255, 223, 0, 0.5);
+}
+ .overlay p {
+    font-size: 1.2rem; /* Slightly larger */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ddd; /* Lighter text */
+}
+ /* Style for button container */
+.overlay .button-container {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+.overlay button {
+    padding: 14px 28px; /* Larger padding */
+    font-size: 1.25rem; /* Larger font */
+    font-weight: bold;
+    color: #222; /* Darker text for contrast */
+    background: linear-gradient(145deg, #ffe566, #ffd700); /* Gold gradient */
+    border: none;
+    border-radius: 10px; /* More rounded */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    min-width: 140px; /* Ensure buttons have some width */
+}
+.overlay button:hover {
+    transform: translateY(-3px) scale(1.03); /* Enhanced hover effect */
+    box-shadow: 0 7px 12px rgba(255, 223, 0, 0.5);
+}
+.overlay button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+/* Specific ID for intro screen */
+#introScreen {
+    /* Will be shown by JS */
+}
+/* Style for the final win screen title */
+#finalWinScreen h2 {
+    font-size: 4rem; /* Much larger title */
+     color: #4CAF50; /* Green color for final victory */
+     text-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+}
+ #finalWinScreen {
+     border-color: #4CAF50; /* Match border */
+     box-shadow: 0 5px 25px rgba(76, 175, 80, 0.6);
+ }
+  #finalWinScreen button {
+     background: linear-gradient(145deg, #81C784, #4CAF50); /* Green gradient button */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+ }
+ #finalWinScreen button:hover {
+     box-shadow: 0 7px 12px rgba(76, 175, 80, 0.6);
+ }

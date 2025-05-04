@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script> 
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find the Star Game - Sounds</title> </head>
+
+  <body>
+    <div id="introScreen" class="overlay">
+        <h2>Find the Star!</h2>
+        <p>Move your light source (mouse) to reveal the maze.<br>Find and click the pulsating star to advance.<br>Three levels await! (Sound On!)</p> <div class="button-container">
+             <button id="startButton">Start Game</button>
+        </div>
+    </div>
+
+    <div id="winMessage" class="overlay">
+        <h2 id="winLevelTitle">Level X Complete!</h2> 
+        <p>Well done! Ready for the next challenge?</p>
+        <div class="button-container">
+            <button id="nextLevelButton">Next Level</button>
+            <button id="restartButtonWin">Restart Game</button> 
+        </div>
+    </div>
+
+    <div id="finalWinScreen" class="overlay">
+         <h2>YOU WON!</h2>
+         <p>Congratulations! You've mastered the maze and found all the stars!</p>
+         <div class="button-container">
+             <button id="playAgainButton">Play Again?</button> 
+         </div>
+    </div>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
